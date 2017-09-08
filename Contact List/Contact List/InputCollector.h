@@ -1,5 +1,5 @@
 //
-//  main.m
+//  InputCollector.h
 //  Contact List
 //
 //  Created by Paul on 2017-09-08.
@@ -8,11 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-int main(int argc, const char * argv[]) {
-    @autoreleasepool {
-      
-        
-        
-    }
-    return 0;
-}
+@interface InputCollector : NSObject
+
+@end
