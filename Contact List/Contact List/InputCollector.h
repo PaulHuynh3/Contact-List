@@ -7,7 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Contact.h"
 
 @interface InputCollector : NSObject
+@property NSString* name;
+@property NSString* email;
+
+-(void)displayMenu;
+
+-(NSString *)inputForPrompt:(NSString *)promptString;
+
 
 @end
