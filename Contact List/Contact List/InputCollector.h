@@ -10,10 +10,11 @@
 #import "Contact.h"
 
 @interface InputCollector : NSObject
+@property NSString* question;
 @property NSString* name;
 @property NSString* email;
 
--(void)displayMenu;
+-(NSString*)captureAnswer;
 
 -(NSString *)inputForPrompt:(NSString *)promptString;
 

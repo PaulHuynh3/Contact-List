@@ -10,6 +10,41 @@
 
 @implementation InputCollector
 
+-(instancetype)init{
+    self =[super init];
+    
+    if (self){
+        //display question
+    NSString* showQuestion = @"Choose new or quit";
+    _question = showQuestion;
+
+    }
+    return self;
+}
+
+-(NSString*)captureAnswer{
+
+    
+    //255 unit long array of characters
+    char inputChars[255];
+    
+    //limit input to max 255 characters fgets collect user's answer
+    fgets(inputChars, 255, stdin);
+    
+    //convert char array to an NSString object
+    NSString *stringDisplay = [NSString stringWithCString:inputChars encoding:NSUTF8StringEncoding];
+    
+    //remove white space from user answer
+    NSString* display = [stringDisplay stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
+    //show this in main. create if statement if they type quit make them exit, new to begin etc...
+//    display = [NSString stringWithFormat:@"Type QUIT to exit. Type NEW to begin!!!"];
+    
+    return display;
+    
+}
+
+
 -(NSString *)inputForPrompt:(NSString *)promptString{
     
     if ([promptString isEqualToString:@"quit"]){

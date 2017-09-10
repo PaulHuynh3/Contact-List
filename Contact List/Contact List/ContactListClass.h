@@ -15,5 +15,6 @@
 -(void)addContact:(Contact *)newContact;
 //on task 4
 
+-(void)list;
 
 @end

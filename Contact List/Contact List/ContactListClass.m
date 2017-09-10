@@ -25,5 +25,24 @@
 
 }
 
+-(void)list{
+//
+//    for (int i =0 ; i<_contactArray.count; i++) {
+//        NSString* contactDisplay = [NSString stringWithFormat:@"#:%@ %@",_contactArray[i], _contactArray[i+1]];
+//        NSLog(@"%@", contactDisplay);
+//    }
+
+    
+// to retrieve information from the getting the contacts out
+    int contactKey = 0;
+    for(Contact *contacts in self.contactArray){
+        NSLog(@"%i:<%@ %@> ()", contactKey, contacts.nameContact, contacts.emailContact);
+        contactKey++;
+
+    }
+
+    
+}
+
 
 @end
